@@ -1,5 +1,4 @@
 import sqlite3
-
 class Database :
     def __init__(self,db):
         self.con = sqlite3.connect(db)
@@ -39,5 +38,5 @@ class Database :
     def update(self,id,name,age,doj,email,gender,contact,address):
         self.cur.execute("update employees set name=?,age=?,doj=?,email=?,gender=?,contact=?,address=? where id=?",(name,age,doj,email,gender,contact,address,id))
         self.con.commit()
-o = Database("Employee.db")
+# o = Database("Employee.db")
 # o.insert("Hemanth Kumar","18","03-05-2003","m.hemanthkmr143@gmail.com","Male","8072764866","Hello 77")
